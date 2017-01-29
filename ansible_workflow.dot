@@ -1,0 +1,14 @@
+digraph G {
+rankdir=LR;
+nodesep=0.6;
+sep="+25,25";
+node [fontsize=11];
+overlap=scalexy;
+splines=true;
+try[label="run some commands"];
+script[label="string them together as a script"];
+run[label="run the script"];
+try -> script -> run;
+run -> errors -> try;
+run -> finished;
+}

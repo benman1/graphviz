@@ -1,0 +1,14 @@
+digraph G {
+rankdir=LR;
+nodesep=0.6;
+sep="+25,25";
+node [fontsize=11];
+overlap=scalexy;
+splines=true;
+idea[image="cloud.jpg", label="idea", shape="plaintext"];
+idea -> discovery[style="dotted"];
+rescoping -> still_necessary -> rescoping [style="dotted"];
+kickoff[label="kickoff meeting"];
+still_necessary[label="is this still needed?"];
+discovery -> planning -> analysis -> prioritisation -> groundwork -> workshop -> kickoff -> rescoping -> planning;
+}

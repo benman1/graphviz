@@ -1,0 +1,11 @@
+digraph G {
+splines=true;
+sep="+25,25";
+overlap=scalexy;
+nodesep=0.6;
+node [fontsize=11];
+ think -> implement;
+ think -> improve;
+ implement -> think;
+ improve -> think;
+}

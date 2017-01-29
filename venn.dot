@@ -1,0 +1,8 @@
+graph G {
+  overlap=prism;
+  node [shape=circle];
+  A[label=<countries with Trump business ties<BR />
+        <FONT POINT-SIZE="10">Saudi Arabia, the United Arab Emirates, Egypt and Lebanon</FONT>>];
+  B[label=<countries without Trump business ties<br/><font point-size="10">Syria, Iraq, Iran, Sudan, Libya, Somalia and Yemen</font>>];
+  { rank=same; A B }
+}

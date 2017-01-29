@@ -1,0 +1,21 @@
+digraph G {
+rankdir=LR;
+nodesep=0.6;
+sep="+25,25";
+node [fontsize=11];
+overlap=scalexy;
+splines=true;
+planning -> groundwork -> forgetaboutit;
+planning -> workshop -> forgetaboutit;
+planning -> prioritisation -> forgetaboutit;
+groundwork -> prioritisation;
+groundwork -> workshop;
+workshop -> groundwork;
+workshop -> prioritisation;
+prioritisation -> groundwork;
+prioritisation -> workshop;
+groundwork -> kickoff_meeting;
+workshop -> kickoff_meeting;
+prioritisation -> kickoff_meeting -> proposal_report;
+forgetaboutit[label="forget about it!"]
+}
