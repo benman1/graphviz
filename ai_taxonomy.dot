@@ -1,0 +1,47 @@
+digraph G {
+ //twopi -Tpng taxonomy.dot -o taxonomy.png
+ size="14,18";
+ ranksep="1.75";
+ node [style=filled color=gray65];
+ ArtificialIntelligence [label="Artificial Intelligence"];
+ node [style=filled color=lightgray];
+ MachineLearning [label="Machine\/\nLearning"];
+ ReinforcementLearning [label="Reinforcement\/\nLearning"];
+ ArtificialIntelligence -> GAN;
+ ArtificialIntelligence -> ReinforcementLearning;
+ ArtificialIntelligence -> Metaheuristics;
+ ArtificialIntelligence -> MachineLearning;
+ EvolutionaryAlgorithms [label="Swarm\/\nAlgorithms"];
+ EvolutionaryAlgorithms [label="Evolutionary\nAlgorithms"];
+ TransferLearning [label="Transfer\nLearning"];
+ AutomatedML [label="Automated\nMachine\nLearning"];
+ GAN [label="Generative\n Adversarial \n Networks"];
+ Metaheuristics -> SwarmAlgorithms;
+ Metaheuristics -> EvolutionaryAlgorithms;
+ Metaheuristics -> TransferLearning;
+ Metaheuristics -> AutomatedML;
+ //GAN -> Semisupervised;
+ //GAN -> Supervised;
+ //GAN -> Unsupervised;
+ Supervised [label="Supervised"];
+ Unsupervised [label="Unsupervised"];
+ Semisupervised [label="Semi-Supervised"];
+ ImitationLearning [label="Imitation\n Learning"];
+ ValueBased [label="Value\n Based"];
+ MachineLearning -> Supervised;
+ MachineLearning -> Unsupervised;
+ MachineLearning -> Semisupervised;
+ ReinforcementLearning -> ImitationLearning;
+ ReinforcementLearning -> ValueBased;
+ node [style=filled color=gray99];
+ GeneticAlgorithms [label="Genetic\/\nAlgorithms"]
+ ParticleSwarm [label="Particle\nSwarm\nOptimization"]
+ DimensionalityReduction [label="Dimensionality\nReduction"]
+ EvolutionaryAlgorithms -> GeneticAlgorithms;
+ EvolutionaryAlgorithms -> Neuroevolution;
+ SwarmAlgorithms -> ParticleSwarm;
+ Supervised -> Classification;
+ Supervised -> Regression;
+ Unsupervised -> Clustering;
+ Unsupervised -> DimensionalityReduction;
+}
